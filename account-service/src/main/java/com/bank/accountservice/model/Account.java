@@ -22,7 +22,6 @@ public class Account {
     @Column(nullable = false)
     private String accountType;
 
-    // Getters and Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     public String getAccountNumber() { return accountNumber; }
