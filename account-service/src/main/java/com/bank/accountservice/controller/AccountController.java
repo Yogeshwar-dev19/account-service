@@ -16,20 +16,20 @@ public class AccountController {
     public AccountController(AccountService service) {
         this.service = service;
     }
-    // GET http://localhost:8082/api/accounts
+
     @GetMapping
     public ResponseEntity<List<Account>> getAll() {
         return ResponseEntity.ok(service.getAllAccounts());
     }
 
-    // GET http://localhost:8082/api/accounts/1
+    
     @GetMapping("/{id}")
     public ResponseEntity<Account> getById(
             @PathVariable Long id) {
         return ResponseEntity.ok(service.getAccountById(id));
     }
 
-    // POST http://localhost:8082/api/accounts
+    
     @PostMapping
     public ResponseEntity<Account> create(
             @RequestBody Account account) {
